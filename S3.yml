@@ -2,7 +2,7 @@ Parameters:
   S3Parameters:
     Description: enter the Name of your S3 Bucket
     Type: String
-    AllowedPattern: "[a-z0-9]""
+    AllowedPattern: "[a-z0-9]"
 
 Resources:
   S3Creation:
@@ -13,9 +13,10 @@ Resources:
 Outputs:
   S3FinalBucketNameusingattributes:
     Value: !GetAtt S3Creation.Arn
-  S3FinalBucketNameusingcallback
-    Value: !Ref S3Creation
+    
+ # S3FinalBucketNameusingcallback
+ #   Value: !Ref S3Creation
 
 
-Fix multiple output things here
-setup validation rules for the parameters
+#Fix multiple output things here
+#setup validation rules for the parameters
