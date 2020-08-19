@@ -1,0 +1,29 @@
+{
+    "Parameters": {
+        "S3Parameters": {
+            "Description": "enter the Name of your S3 Bucket",
+            "Type": "String",
+            "AllowedPattern": "[a-z0-9]"
+        }
+    },
+    "Resources": {
+        "S3Creation": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": {
+                    "Ref": "S3Parameters"
+                }
+            }
+        }
+    },
+    "Outputs": {
+        "S3FinalBucketNameusingattributes": {
+            "Value": {
+                "Fn::GetAtt": [
+                    "S3Creation",
+                    "Arn"
+                ]
+            }
+        }
+    }
+}
