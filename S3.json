@@ -3,7 +3,7 @@
         "S3Parameters": {
             "Description": "enter the Name of your S3 Bucket",
             "Type": "String",
-            "AllowedPattern": "[a-z0-9]"
+#            "AllowedPattern": "[a-z0-9]"
         }
     },
     "Resources": {
