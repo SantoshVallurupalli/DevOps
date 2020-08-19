@@ -1,0 +1,21 @@
+Parameters:
+  S3Parameters:
+    Description: enter the Name of your S3 Bucket
+    Type: String
+    AllowedPattern: "[a-z0-9]""
+
+Resources:
+  S3Creation:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3Parameters
+
+Outputs:
+  S3FinalBucketNameusingattributes:
+    Value: !GetAtt S3Creation.Arn
+  S3FinalBucketNameusingcallback
+    Value: !Ref S3Creation
+
+
+Fix multiple output things here
+setup validation rules for the parameters
